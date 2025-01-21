@@ -1,0 +1,18 @@
+services:
+  reverse-proxy:
+    build:
+      context: ./reverse-proxy
+    ports:
+      - "80:80"  
+    volumes:
+      - ./logs:/var/log/nginx 
+    depends_on:
+      - web-app
+
+  web-app:
+    build:
+      context: ./web-app
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "5000"  
