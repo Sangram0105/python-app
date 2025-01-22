@@ -12,7 +12,7 @@ def present():
      return "hello my world"
 @app.route('/sangram')
 def sangram():
-    return render_template(index.html)
+    return render_template("index.html")
 @app.route('/error')
 def trigger_error():
     app.logger.error("An error occurred.")
