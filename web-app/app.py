@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask,  render_template, jsonify
 
 app = Flask(__name__)
 
@@ -11,6 +11,8 @@ def hello_world():
 def present():
      return "hello my world"
 @app.route('/sangram')
+def sangram():
+    return render_template(index.html)
 @app.route('/error')
 def trigger_error():
     app.logger.error("An error occurred.")
