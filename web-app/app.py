@@ -10,6 +10,7 @@ def hello_world():
 @app.route('/abc')
 def present():
      return "hello my world"
+@app.route('/sangram')
 @app.route('/error')
 def trigger_error():
     app.logger.error("An error occurred.")
