@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-RUN addgroup --system appgroup && adduser --system --home /home/appuser --ingroup appgroup appuser
+RUN addgroup  appgroup && adduser --home /home/appuser --ingroup appgroup appuser
 
 WORKDIR /app
 
